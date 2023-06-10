@@ -1,5 +1,6 @@
-import { ActivityIndicator, Text, View } from "react-native";
+import { ActivityIndicator } from "react-native";
 import { ThemeProvider } from "styled-components/native";
+import { Home } from "@screens/Home";
 import theme from "@theme/index";
 import {
   useFonts,
@@ -17,9 +18,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <View>
-        {fontsLoaded ? <Text>Hello world!</Text> : <ActivityIndicator />}
-      </View>
+      {fontsLoaded ? <Home /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
