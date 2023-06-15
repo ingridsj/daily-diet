@@ -1,4 +1,4 @@
-import { getColor } from "@components/utils/getColor";
+import { getColor } from "@utils/getColor";
 import { ArrowUpRight } from "phosphor-react-native";
 import styled from "styled-components/native";
 

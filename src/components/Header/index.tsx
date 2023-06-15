@@ -1,7 +1,7 @@
 import { StatusBar, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ArrowLeft } from "phosphor-react-native";
-import { getColor } from "@components/utils/getColor";
+import { getColor } from "@utils/getColor";
 
 import * as S from "./styles";
 
