@@ -8,6 +8,7 @@ import {
   NunitoSans_700Bold,
   NunitoSans_900Black,
 } from "@expo-google-fonts/nunito-sans";
+import { Routes } from "@routes/index";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,7 +19,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      {fontsLoaded ? <Routes /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
