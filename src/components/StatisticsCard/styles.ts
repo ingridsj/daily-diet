@@ -20,6 +20,8 @@ export const Container = styled.View<ContainerProps>`
     variant ? getColor(variant).background : theme.COLORS.GRAY_600};
   border-radius: 8px;
   padding: 16px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const OpenIcon = styled(ArrowUpRight).attrs<IconProps>(
