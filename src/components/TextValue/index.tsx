@@ -5,7 +5,7 @@ import * as S from "./styles";
 
 type Props = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   fontSize?: number;
   titleColor?: string;
   subtitleColor?: string;
@@ -23,7 +23,9 @@ export function TextValue({
       <S.Title fontSize={fontSize} titleColor={titleColor}>
         {title}
       </S.Title>
-      <S.Subtitle subtitleColor={subtitleColor}>{subtitle}</S.Subtitle>
+      {subtitle && (
+        <S.Subtitle subtitleColor={subtitleColor}>{subtitle}</S.Subtitle>
+      )}
     </View>
   );
 }
