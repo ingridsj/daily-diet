@@ -4,20 +4,18 @@ type Props = {
   children: JSX.Element;
   showOpenButton?: boolean;
   height: number;
-  variant: S.Variant;
+  variant?: S.Variant;
 };
 
 export function StatisticsCard({
   children,
   showOpenButton = false,
   height,
-  variant
+  variant,
 }: Props) {
   return (
     <S.Container height={height} variant={variant}>
-      {showOpenButton && (
-          <S.OpenIcon variant={variant}/>
-      )}
+      {showOpenButton && <S.OpenIcon variant={variant} />}
       {children}
     </S.Container>
   );

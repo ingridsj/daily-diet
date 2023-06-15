@@ -1,4 +1,4 @@
-import theme from "@theme/index";
+import { getColor } from "@components/utils/getColor";
 import { ArrowUpRight } from "phosphor-react-native";
 import styled from "styled-components/native";
 
@@ -6,29 +6,18 @@ export type Variant = "inDiet" | "outDiet";
 
 type ContainerProps = {
   height: number;
-  variant: Variant;
+  variant?: Variant;
 };
 
 type IconProps = {
   variant: Variant;
 };
 
-function getVariantColor(variant: Variant) {
-  if (variant === "inDiet") {
-    return theme.COLORS.GREEN_LIGHT;
-  }
-
-  if (variant === "outDiet") {
-    return theme.COLORS.RED_LIGHT;
-  }
-
-  return theme.COLORS.GRAY_600;
-}
-
 export const Container = styled.View<ContainerProps>`
   width: 100%;
   height: ${({ height }) => height}px;
-  background-color: ${({ variant }) => getVariantColor(variant)};
+  background-color: ${({ variant, theme }) =>
+    variant ? getColor(variant).background : theme.COLORS.GRAY_600};
   border-radius: 8px;
   padding: 16px;
 `;
